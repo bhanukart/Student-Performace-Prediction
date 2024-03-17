@@ -1,8 +1,83 @@
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Reset some default styles */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+        
+            /* Body styles */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #000000; /* Black background */
+                color: #ffffff; /* White text */
+            }
+        
+            /* Center the form */
+            .login {
+                margin: 50px auto;
+                width: 80%;
+                max-width: 400px;
+                padding: 20px;
+                background-color: #292929; /* Dark gray for form background */
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Silver shadow */
+            }
+        
+            /* Style form header */
+            .login h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+                color: #cccccc; /* Light gray for header text */
+            }
+        
+            /* Style form inputs and labels */
+            .form-label {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 16px;
+                color: #cccccc; /* Light gray for label text */
+            }
+        
+            .form-control {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #aaaaaa; /* Silver border */
+                border-radius: 4px;
+                background-color: #333333; /* Dark gray for input background */
+                color: #ffffff; /* White text */
+            }
+        
+            /* Style submit button */
+            .btn-primary {
+                background-color: #ffd700; /* Gold */
+                color: #000000; /* Black text */
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            .btn-primary:hover {
+                background-color: #ffc800; /* Darker gold on hover */
+            }
+        
+            /* Style result section */
+            h2 {
+                margin-top: 20px;
+                font-size: 18px;
+                color: #ffd700; /* Gold */
+            }
+        </style>
+    </head>
 <body>
-    <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
-   
+    <div class="login">  
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
             <legend>Student Exam Performance Prediction</legend>
